@@ -17,7 +17,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@mf-react-state/shared/theme-hoc": [
+        "libs/shared/theme-hoc/src/index.ts"
+      ]
+    }
   },
   "exclude": [
     "node_modules",

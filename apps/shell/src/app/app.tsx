@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import createTheme from '@mui/material/styles/createTheme';
+import ThemeProvider from '@mf-react-state/shared/theme-hoc';
 import MUIThemeProvider from '@mui/material/styles/ThemeProvider';
 import { red } from '@mui/material/colors';
 
@@ -19,7 +20,7 @@ const theme = createTheme({
 
 export function App() {
   return (
-    <MUIThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       <React.Suspense fallback={null}>
       <ul>
         <li><Link to="/">Home</Link></li>
@@ -29,7 +30,7 @@ export function App() {
           <Route path="/remote" element={<Remote/>} />
       </Routes>
       </React.Suspense>
-    </MUIThemeProvider>
+    </ThemeProvider>
   );
 }
 
